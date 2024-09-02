@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://i.pinimg.com/564x/c3/65/21/c36521b06fc52a4dcf079ced2e983f41.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9); 
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 1em;
+            background-color: #f0ab2c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ecc57d;
+        }
+
+        .hidden {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 315px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>I’m so sorry</h1>
+        <p>hello my stevie.</p>
+        <button id="showPictureButton">open me</button>
+        <div id="hiddenContent" class="hidden">
+            <p>hi, baby. i know i hurt you and my actions were very insensitive. i know i messed up, and i’m truly sorry for hurting you. please stop ignoring me because i can’t take it anymore. i love you so much and can’t bear the thought of losing you. i didn’t mean to hurt you, and i know i can’t undo what’s been done, but i promise i’ll make it up to you. i love you more than anything.</p>
+            <img src="https://i.pinimg.com/564x/e4/3d/b5/e43db57ea20b7cc167cf57c8ba059ba7.jpg" alt="Sorry baby">
+            <iframe id="youtubeVideo" src="https://www.youtube.com/embed/POWpFgCqbSI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("showPictureButton").addEventListener("click", function() {
+            var hiddenContent = document.getElementById("hiddenContent");
+            hiddenContent.classList.toggle("hidden");
+
+            if (!hiddenContent.classList.contains("hidden")) {
+                document.getElementById("youtubeVideo").src += "?autoplay=1";
+            } else {
+                document.getElementById("youtubeVideo").src = document.getElementById("youtubeVideo").src.replace("?autoplay=1", "");
+            }
+        });
+    </script>
+</body>
+</html>
